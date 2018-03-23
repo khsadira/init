@@ -1,0 +1,1 @@
+ping -o slash16.org | grep byte | cut -d m -f2 | cut -d " " -f2 | cut -d : -f1

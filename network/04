@@ -1,1 +1,1 @@
-netstat -nr | grep default
+netstat -nr | grep default | grep 1 | sed "s/\ \ */\ /g" | cut -d " " -f2 | cut -d " " -f1
