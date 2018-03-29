@@ -1,1 +1,1 @@
-/etc/resolv.conf
+Le fichier dans lequel est ecrit l'adresse IP du serveur DNS que l'on utilise se trouve dans : /etc/resolv.conf

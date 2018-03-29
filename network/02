@@ -1,1 +1,1 @@
-ifconfig -a | grep eth | cut -d  " " -f2
+ifconfig -a | grep inet | sed -n 5p | cut -d " " -f2

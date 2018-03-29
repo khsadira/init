@@ -1,1 +1,1 @@
-ifconfig -a | grep ec: | cut -d " " -f2
+ifconfig -a | grep ether | sed -n 2p | cut -d " " -f2
