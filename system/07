@@ -1,1 +1,1 @@
-ps aux | grep sshd
+ps aux | grep sshd | sed -n 1p | sed 's/\s\s\+/ /g' | cut -d " " -f2
