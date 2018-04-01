@@ -1,1 +1,1 @@
-Le ficher content les cles RSA autorisees a se connecter via SSH est le fichier known_hosts situees dans le dossier ~/.ssh
+~/.ssh/autorized_keys contient les clefs RSA autorisees a se connecter via SSH
