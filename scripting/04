@@ -1,0 +1,46 @@
+if	!( test -s ./sum )
+then
+	echo "Creating stock file."
+	sleep 1
+	md5sum /etc/crontab > sum
+	echo "Done."
+	exit
+fi
+
+echo "Creating compare file."
+sleep 1
+md5sum /etc/crontab > sum2
+echo "Done"
+
+echo "Creating diff file which find difference between both file."
+sleep 1
+diff sum sum2 > diff
+echo "Done"
+
+if	( test -s ./diff )
+then
+	echo "Modification detected on /etc/crontab"
+	echo "Modification detected on /etc/crontab :" > mailfiles
+	echo "" >> mailfiles
+	cat diff >> mailfiles
+	echo "send mail to : someome"
+	cat mailfiles | mail -s "Crontab was modify" root
+	sleep 1
+	echo "Done"
+	echo "Updating stock file."
+	sleep 1
+	md5sum /etc/crontab > sum
+	echo "Done"
+
+else
+
+	echo "No modification detected on /etc/crontab"
+
+fi
+
+echo "Deleting compare and diff files."
+sleep 1
+rm sum2
+rm diff
+echo "Done."
+exit
