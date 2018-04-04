@@ -10,12 +10,10 @@ fi
 echo "Creating compare file."
 sleep 1
 md5sum /etc/crontab > sum2
-echo "Done"
 
 echo "Creating diff file which find difference between both file."
 sleep 1
 diff sum sum2 > diff
-echo "Done"
 
 if	( test -s ./diff )
 then
@@ -23,15 +21,13 @@ then
 	echo "Modification detected on /etc/crontab :" > mailfiles
 	echo "" >> mailfiles
 	cat diff >> mailfiles
-	echo "send mail to : someome"
+	echo "send mail to root"
 	cat mailfiles | mail -s "Crontab was modify" root
+	rm mailfiles
 	sleep 1
-	echo "Done"
 	echo "Updating stock file."
 	sleep 1
 	md5sum /etc/crontab > sum
-	echo "Done"
-
 else
 
 	echo "No modification detected on /etc/crontab"
