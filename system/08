@@ -1,1 +1,2 @@
-~/.ssh/autorized_keys contient les clefs RSA autorisees a se connecter via SSH
+#!/bin/bash
+il se trouve dans le fichier /etc/ssh/sshd_config

@@ -1,1 +1,3 @@
-dhcp.42.fr.
+#!/bin/bash
+Le fichier hosts contient les entrees locales DNS.
+Il se situe dans /etc/hosts

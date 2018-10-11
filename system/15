@@ -1,1 +1,2 @@
-pkill tail
+#!/bin/bash
+kill

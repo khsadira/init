@@ -1,1 +1,2 @@
-service ssh restart
+#!/bin/bash
+sudo service ssh restart

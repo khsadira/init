@@ -1,3 +1,0 @@
-hostname -I
-Ca marche pour connaitre ton adresse ip sur le reseau local mais pas pour 42
-sudo lshw -class network

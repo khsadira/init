@@ -1,5 +1,0 @@
-date >> /var/log/update_script.log ; echo '' >> /var/log/update_script.log ; echo 'source:' >> /var/log/update_script.log ; apt-get source * >> /var/log/update_script.log ; echo '' >> /var/log/update_script.log ; echo 'update:' >> /var/log/update_script.log ; apt-get update >> /var/log/update_script.log ; echo -e '\n' >> /var/log/update_script.log
-
-# pour planifier une tache on ouvre la crontab via la commande crontab -e
-# puis on insert la ligne suivante :
-# 0 4  * * 6		root	date >> /var/log/update_script.log ; echo '' >> /var/log/update_script.log ; echo 'source:' >> /var/log/update_script.log ; apt-get source * >> /var/log/update_script.log ; echo '' >> /var/log/update_script.log ; echo 'update:' >> /var/log/update_script.log ; apt-get update >> /var/log/update_script.log ; echo -e '\n' >> /var/log/update_script.log

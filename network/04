@@ -1,1 +1,2 @@
-netstat -nr | grep default | sed -n 1p | awk '{print $2}'
+#!/bin/bash
+route get default

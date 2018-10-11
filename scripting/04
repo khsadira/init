@@ -1,3 +1,4 @@
+#!/bin/bash
 if	!( test -s ./sum )
 then
 	echo "Creating stock file."

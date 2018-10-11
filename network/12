@@ -1,1 +1,2 @@
-ping -o 10.51.1.253 | grep packet
+#!/bin/bash
+ping -o 10.51.1.253
