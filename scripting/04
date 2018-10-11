@@ -41,3 +41,7 @@ rm sum2
 rm diff
 echo "Done."
 exit
+
+# Pour planifier une tache on ouvre la crontab (/etc/crontab) ou crontab -e
+# puis on insert la ligne suivante :
+# 0 4 * * * ./pathdubinaire
